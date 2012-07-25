@@ -1,6 +1,9 @@
 class CreateUsers < ActiveRecord::Migration
   def self.up
     create_table :users do |t|
+
+      t.integer :id,        :null => false
+
       t.string  :login,     :null => false, :limit => 30
       t.string  :pass,      :null => false, :limit => 30
       t.string  :salt,      :null => false
